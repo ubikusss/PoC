@@ -6,7 +6,6 @@ package main
 import (
 	"context"
 	"fmt"
-	"gopkg.in/yaml.v2"
 	"io/ioutil"
 	"log"
 	"os"
@@ -14,6 +13,8 @@ import (
 	"strings"
 	"sync"
 	"time"
+
+	"gopkg.in/yaml.v2"
 
 	"github.com/gofrs/flock"
 	"github.com/pkg/errors"
@@ -32,7 +33,7 @@ import (
 var settings *cli.EnvSettings
 
 var (
-	url         = "https://kubernetes-charts.storage.googleapis.com"
+	url         = "https://charts.helm.sh/stable"
 	repoName    = "stable"
 	chartName   = "mysql"
 	releaseName = "mysql-dev"
